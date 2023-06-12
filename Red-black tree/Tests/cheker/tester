@@ -1,0 +1,5 @@
+#!/bin/bash
+for ((i=1;i<= 30;i++))
+do
+./gen.out && ./gen-2.out && valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose --log-file=valgrind-out.txt ./lab2ex < test_of_absolutia > res-test&& tail -n5 valgrind-out.txt && valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose --log-file=valgrind-out.txt ./lab2ex < second_test_of_absolutia > res-test && tail -n5 valgrind-out.txt 
+done

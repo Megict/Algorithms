@@ -1,0 +1,2 @@
+g++ -Wall -o lab9.exe main.cpp && valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose --log-file=valgrind-out.txt ./lab9.exe < testx && tail -n5 valgrind-out.txt
+
